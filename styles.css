@@ -1,0 +1,205 @@
+/* 
+    ---------------------------------------------------------------
+    Add your name to this file below:
+    NAME: 
+    ---------------------------------------------------------------
+*/
+
+
+/* Remember, the root element is where you can declare CSS variables */
+:root{
+    /* Theme colors in CSS variables */
+	--lime: #41c84c;
+	--mint: #9ee3a4;
+	--teal: #41c8b1;
+	--tiffany: #9ee3d7;
+	--plum: #6e2275;
+	--amethyst: #bc41c8;
+
+    /* text and background colors */
+    --white: #fff;
+    --lt-gray: #eaeaea;
+    --med-gray: #555;
+    --dk-gray: #222;
+
+    /* Font Stacks */
+    /* add the two font stacks here */
+}
+
+body{
+	/* set the font family to Lato, Arial, sans-serif (--body-fonts) */
+	/* Set the line height to 1.5 */
+	/* set the font size to 1.1rem	*/
+	/* set the font color to #222 (--dk-gray) */
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	padding: 1rem;
+	background-color: var(--plum);
+	color: var(--white);
+	border-bottom: 8px solid var(--teal);
+}
+
+h1, h2, h3{
+	/* center align the text */
+	/* use a web font here (instructions on page) */
+	/* make the heading text all small caps style */
+}
+
+h2{
+	margin: 0;
+	padding: 4px;
+	text-decoration: dotted underline var(--teal) 4px;
+}
+
+h3{
+	margin: 0;
+	padding: 4px;
+	/* add an underline like the one on the h2s to the h3s, but make it solid and mint color */
+}
+
+nav{
+	margin: 0 auto;
+	padding: 0.5rem 0;
+}
+
+nav ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+
+nav a{
+	/* make these display as block level elements */
+	margin: 1rem auto;
+	padding: 1rem;
+	background-color: var(--tiffany);
+	/* set the font color to #222 (--dk-gray) */
+	/* center align the text */
+	/* remove the underline */
+	/* make the font's size 1.2rem */
+	/* make the font bolder (600) */
+}
+
+nav a:hover{
+    color: var(--dk-gray);
+	background-color: var(--teal);
+}
+
+main{
+	padding: 2rem 1rem;
+}
+
+section{
+	padding: 1rem;
+}
+
+#fonts, #text{
+	border-bottom: 4px solid var(--plum);
+}
+
+p{
+	/* set a max-width of 55 characters */
+	/* add an indent on the first line of 2rem */
+	/* center those paragraphs (not the text) on the page */
+	padding: 0.5rem;
+}
+
+a{
+    color: var(--plum);
+}
+
+a:hover{
+    color: var(--lime);
+}
+
+dl, ol, main ul{
+	/* limit the width of these lists to 55 characters */
+	margin: 1rem auto;
+}
+
+dt{
+	/* make this font display in bold weight */
+}
+
+dt::before{
+	color: var(--amethyst);
+	content: "\2605";
+	padding-right: 4px;
+}
+
+#static, #absolute, #relative, #fixed{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+#static{
+	background-color: var(--lime);
+	position: static;
+    margin: 1rem auto;
+}
+
+#absolute{
+	background-color: var(--plum);
+	position: absolute;
+	left: calc(25% - 25px);
+}
+
+#relative{
+	background-color: var(--teal);
+	position: relative;
+	left: 75%;
+}
+
+#fixed{
+	background-color: var(--amethyst);
+	/* make this display in a fixed position */
+	/* move this to the left by 80% of the width of the viewport */
+	/* move this down to 89% of the height of the viewport */
+}
+
+svg{
+	display: block;
+	padding: 3px
+}
+
+footer{
+	padding: 1rem;
+	background-color: var(--plum);
+	color: var(--white);
+	text-align: center;
+	border-top: 8px solid var(--teal);
+}
+
+
+/* 
+    THIS CODE IS A MEDIA QUERY, USED TO ADD STYLES BASED ON HOW WIDE THE SCREEN IS. IT IS PART OF WHAT IS MAKING THE SITE RESPONSIVE. THE SAME GOES FOR THE MEDIA QUERIES BELOW
+
+    LEARN MORE ABOUT RESPONSIVE DEVELOPMENT IN GIT414
+*/
+@media screen and (min-width: 450px){
+	nav{
+		width: fit-content;
+	}
+		
+	nav ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 0.5rem;
+	}
+}
+
+@media screen and (min-width: 650px){
+    #fixed{
+        left: 85vw;
+    }
+}
+
+@media screen and (min-width: 800px){
+    #fixed{
+        left: 90vw;
+        top: 93vh;
+    }
+}
